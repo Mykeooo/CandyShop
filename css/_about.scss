@@ -1,0 +1,257 @@
+.aboutHero{
+    position: relative;
+    padding: 8rem 0 6rem 0;
+    background: linear-gradient(80.79deg, $purple 26.33%, $white 81.73%);
+    min-height: 40rem;
+    @media (max-width: 991.98px) {
+        background: linear-gradient(80.79deg, $purple 30%, $white 100%);
+    }
+    &__content{
+        @include flexBetween;
+        @media (max-width: 991.98px) {
+           flex-direction: column;
+        }
+        &__left{
+            padding-left: 10%;
+            @media (max-width: 575.98px) {
+                padding: 0 6%;
+            }
+            h1{
+                font-size: 5.25rem;
+                font-weight: 600;
+                color: $white;
+                line-height: 5.5rem;
+                @media (max-width: 575.98px) {
+                    font-size: 2.5rem;
+                    line-height: 3rem;
+                }
+                @media (max-width: 991.98px) {
+                }
+                @media (min-width: 992px) and (max-width: 1531.98px){
+                    font-size: 4.5rem;
+                    line-height: 5.125rem;
+                }
+            }
+            p{
+                width: 80%;
+                font-size: 1rem;
+                color: $white;
+                line-height: 2.25rem;
+                margin: 1rem 0;
+                @media (max-width: 575.98px) {
+                    width: 100%;
+                }
+                @media (min-width: 992px) and (max-width: 1531.98px){
+                    width: 90%;
+                    margin: 1.5rem 0;
+                }
+            }
+        }
+        img{
+            width: 35.6875rem;
+            height: auto;
+            @media (max-width: 575.98px) {
+                width: 100%;
+            }
+            @media (max-width: 991.98px) {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.aboutFoot{
+    @include flexCenter;
+    position: relative;
+    padding: 2rem 0;
+    background: linear-gradient(90.4deg, $purple 11.59%, $offpurple 95.72%);
+    &__content{
+        h2{
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: $white;
+            @media (max-width: 575.98px) {
+                font-size: 1.5rem;
+            }
+            @media (max-width: 991.98px) {
+            }
+        }
+    }
+}
+
+.history{
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    &__content{
+        @include flexBetween;
+        margin-top: 4rem;
+        padding: 0 6rem;
+        align-items: flex-start;
+        @media (max-width: 991.98px) {
+            flex-direction: column;
+            padding: 0;
+        }
+        @media (min-width: 992px) and (max-width: 1531.98px){
+            padding: 0 4rem;
+        }
+        img{
+            width: 37.875rem;
+            height: auto;
+            border-radius: 0.25rem;
+            @media (max-width: 575.98px) {
+                width: 100%;
+                margin-left: 0;
+            }
+            @media (max-width: 991.98px) {
+                margin-bottom: 3rem;
+                width: 100%;
+            }
+        }
+        &__text{
+            padding-top: 3rem;
+            @media (max-width: 991.98px) {
+                padding: 0 1rem;
+            }
+            h2{
+                color: $purple;
+                font-size: 3rem;
+                font-weight: 700;
+                @media (max-width: 575.98px) {
+                    font-size: 2.5rem;
+                }
+            }
+            p{
+                font-size: 1rem;
+                margin: 2rem 0;
+                line-height: 1.875rem;
+            }
+        }
+    }
+}
+
+.history{
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    &__content{
+        @include flexBetween;
+        margin-top: 4rem;
+        padding: 0 6rem;
+        align-items: flex-start;
+        @media (max-width: 991.98px) {
+            flex-direction: column;
+            padding: 0;
+        }
+        @media (min-width: 992px) and (max-width: 1531.98px){
+            padding: 0 4rem;
+        }
+        img{
+            width: 37.875rem;
+            height: auto;
+            border-radius: 0.25rem;
+            @media (max-width: 575.98px) {
+                width: 100%;
+                margin-left: 0;
+            }
+            @media (max-width: 991.98px) {
+                margin-bottom: 3rem;
+                width: 100%;
+            }
+        }
+        &__text{
+            padding-top: 3rem;
+            @media (max-width: 991.98px) {
+                padding: 0 1rem;
+            }
+            h2{
+                color: $purple;
+                font-size: 3rem;
+                font-weight: 700;
+                @media (max-width: 575.98px) {
+                    font-size: 2.5rem;
+                }
+            }
+            p{
+                font-size: 1rem;
+                margin: 2rem 0;
+                line-height: 1.875rem;
+            }
+        }
+    }
+}
+
+.snippet{
+    margin-top: 8rem;
+    position: relative;
+    z-index: 2;
+    @media (max-width: 991.98px) {
+        margin-top: 4rem;
+    }
+    h4{
+        text-align: center;
+        font-size: 3.125rem;
+        font-weight: 700;
+        color: $purple;
+        span{
+            color: $offpurple;
+        }
+        @media (max-width: 991.98px) {
+            font-size: 2.5rem;
+            margin-bottom: 4rem;
+        }
+        @media (max-width: 575.98px) {
+            font-size: 1.75rem;
+        }
+    }
+    &__content{
+        @include flexBetween;
+        padding: 0 6rem;
+        padding-left: 10%;
+        @media (max-width: 991.98px) {
+            flex-direction: column;
+            padding: 0;
+        }
+        @media (min-width: 992px) and (max-width: 1531.98px){
+            padding: 0 4rem;
+            padding-left: 10%;
+        }
+        img{
+            width: 49.0625rem;
+            height: auto;
+            border-radius: 0.25rem;
+            @media (max-width: 575.98px) {
+                width: 100%;
+                margin-left: 0;
+            }
+            @media (max-width: 991.98px) {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        &__text{
+            @media (max-width: 991.98px) {
+                padding: 0 1rem;
+            }
+            h2{
+                color: $purple;
+                font-size: 3rem;
+                font-weight: 700;
+                margin: 2rem 0;
+                @media (max-width: 575.98px) {
+                    font-size: 2.5rem;
+                }
+                @media (min-width: 992px) and (max-width: 1299.98px) {
+                    font-size: 2rem;
+                }
+                @media (min-width: 1300px) and (max-width: 1531.98px){
+                    font-size: 2.5rem;
+                }
+            }
+            p{
+                font-size: 1.125rem;
+                font-weight: 600;
+            }
+        }
+    }
+}

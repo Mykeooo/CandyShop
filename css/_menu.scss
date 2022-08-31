@@ -1,0 +1,292 @@
+.menuHero{
+    background-image: url('../img/menu-bg.png');
+    @include bgCover;
+    min-height: 25.375rem;
+    padding-top: 5.75rem;
+    &__content{
+        @include flexBetween;
+        @media (max-width: 991.98px) {
+           flex-direction: column;
+        }
+        h1{
+            font-size: 5.25rem;
+            font-weight: 600;
+            color: $white;
+            position: relative;
+            top: 3.5rem;
+            line-height: 5.5rem;
+            @media (max-width: 575.98px) {
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+            @media (max-width: 991.98px) {
+                top: 2rem;
+            }
+        }
+        img{
+            width: 37.1875rem;
+            height: auto;
+            position: relative;
+            top: 3.5rem;
+            z-index: 1;
+            @media (max-width: 575.98px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.filter{
+    &__item{
+        padding: 2.5rem 0;
+        position: relative;
+        overflow: hidden;
+        &::before{
+            content: '';
+            background: linear-gradient(97.18deg, $offpurple 11.79%, #240046 99.64%);
+            position: absolute;
+            width: 12.6875rem;
+            height: 46.4375rem;
+            top: 0;
+            z-index: -1;
+            @media(max-width: 991.98px) {
+                display: none;
+            }
+            @media (min-width: 992px)  and (max-width: 1531.98px){
+                height: 47.25rem;
+                width: 11rem;
+            }
+        }
+        span{
+            transform: rotate(90deg);
+            font-weight: 700;
+            font-size: 3rem;
+            color: $white;
+            position: absolute;
+            top: 40%;
+            left: -5rem;
+            z-index: -1;
+            @media(max-width: 991.98px) {
+                display: none;
+            }
+            @media (min-width: 992px) and (max-width: 1531.98px){
+                left: -6rem;
+            }
+        }
+    }
+    .item2{
+         &::before{
+             height: 60rem;
+             @media (min-width: 992px) and (max-width: 1531.98px){
+                height: 65rem;
+                width: 11rem;
+            }
+         }
+         span{
+            left: -3.5rem;
+            @media (min-width: 992px) and (max-width: 1531.98px){
+                left: -4.125rem;
+            }
+         }
+     }
+    &__content{
+        position: relative;
+        &__body{
+            width: 85%;
+            margin: 0 auto;
+            padding-left: 5rem;
+            border-radius: 1.25rem;
+            border-top-left-radius: 8.0625rem;
+            @media(max-width: 991.98px) {
+                width: 100%;
+                padding-left: 0;
+            }
+            h2{
+                color: $offpurple;
+                font-size: 3rem;
+                font-weight: 700;
+                padding-bottom: 1rem;
+                @media (max-width: 575.98px) {
+                    font-size: 2.5rem;
+                }
+                @media (min-width: 1300px) and (max-width: 1531.98px){
+                    font-size: 2.5rem;
+                }
+            }
+            &__form{
+                position: relative;
+                z-index: 1;
+                padding-bottom: 2rem;
+                @include flexCenter;
+                font-family: $font1;
+                &__input{
+                    position: relative;
+                    width: 80%;
+                    margin-right: 1rem;
+                    @media (max-width: 575.98px) {
+                        width: 70%;
+                        margin-right: 1rem;
+                    }
+                    input{
+                        padding: 0rem 2rem 0rem 3.5rem;
+                        height: 2.55rem;
+                        border-radius: 3.1875rem;
+                        font-size: 0.875rem;
+                        border: 1px solid #C4C4C4;
+                        &::placeholder {
+                            color: #C4C4C4 !important;
+                        }
+                        &:hover, &:focus, &:active{
+                            border: 1px solid $purple;
+                            border-color: $purple !important;
+                            outline: none !important;
+                        }
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0.75rem;
+                        left: 1rem;
+                        background-image: url('../img/search-icon.svg');
+                        @include bgCover;
+                        display: block;
+                        width: 1.3125rem;
+                        height: 1.125rem;
+                        z-index: 1;
+                    }
+                }
+                &__button{
+                    width: 20%;
+                    position: relative;
+                    @media (max-width: 991.98px) {
+                        width: 30%;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0.75rem;
+                        left: 1rem;
+                        background-image: url('../img/filter-icon.svg');
+                        @include bgCover;
+                        display: block;
+                        width: 1.3125rem;
+                        height: 1.125rem;
+                        z-index: 1;
+                        @media screen and (max-width: 575.98px) {
+                            top: 1.25rem;
+                        }
+                    }
+                    select{
+                        width: 100%;
+                        position: relative;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        text-align: left;
+                        padding-left: 4rem;
+                        border-radius: 3.1875rem;
+                        background-color: $white !important;
+                        color: #C4C4C4;
+                        font-weight: 500;
+                        font-size: 1rem;
+                        border: 1px solid #C4C4C4;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        outline: none;
+                        &::-ms-expand {
+                            display: none;
+                        }
+                        &:hover, &:focus, &:active{
+                            background-color: $white !important;
+                            border: 1px solid $purple;
+                            border-color: $purple !important;
+                            color: $purple !important;
+                            outline: none !important;
+                        }
+                        @media (max-width: 991.98px) {
+                            padding-left: 2.75rem;
+                        }
+                    }
+                }
+            }
+            &__cards{
+                &__single{
+                    @include flexBetween;
+                    margin-bottom: 1rem;
+                    padding-bottom: 0.5rem;
+                    border-bottom: 1px solid #E5E5E5;
+                    // box-shadow: 0 0 0 rgba(255, 255, 255, 0.24), 0 10px 40px -1px rgba(202, 202, 202, 0.30);
+                    @media (max-width: 991.98px) {
+                        width: 100%;
+                        flex-wrap: wrap;
+                    }
+                    @media (max-width: 575.98px) {
+                        width: 100%;
+                        flex-direction: column;
+                    }
+                    &__left{
+                        width: 14.75rem;
+                        background: linear-gradient(180deg, $purple 0%, $darkpurple 100%);
+                        max-height: 19rem;
+                        overflow: hidden;
+                        @media (max-width: 991.98px) {
+                            max-height: 25rem;
+                        }
+                        @media (max-width: 575.98px) {
+                            margin: 1rem 0;
+                        }
+                        img{
+                            width: 100%;
+                            height: auto;
+                            border-radius: 1.5rem;
+                        }
+                    }
+                    &__middle{
+                        width: 60%;
+                        padding: 1rem 1.5rem;
+                        @media (max-width: 575.98px) {
+                            width: 100%;
+                        }
+                        h2{
+                            font-size: 1.25rem;
+                            line-height: 1.5rem;
+                            font-weight: 700;
+                            color: $purple;
+                            padding-bottom: 0.5rem;
+                        }
+                        p{
+                            font-size: 1rem;
+                            line-height: 1.75rem;
+                            text-align: left;
+                        }
+                    }
+                    &__right{
+                        @media (max-width: 575.98px) {
+                           @include flexBetween;
+                        }
+                        h6{
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            color: $purple;
+                        }
+                        a{
+                            margin-top: 0.5rem;
+                            @media (max-width: 575.98px) {
+                                margin-top: 0;
+                                margin-left: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .more{
+        text-align: center;
+        button{
+            font-size: 1rem;
+            font-weight: 500;
+            color: $purple;
+        }
+    }
+}
